@@ -1,0 +1,29 @@
+\item
+	\begin{enumerate}
+		\item
+		O significado do ensaio de Bernoulli é a probabilidade ter
+		$k$ sucessos em $n$ tentativas.
+
+		\item
+		\[p(X=k)=C(n,k)p^kq^{n-k}\]
+
+		\item
+		Mostrando uma equivalência necessária para o desenvolvimento.
+
+		\[\begin{array}{l}
+		C(n,k) = \frac{{n!}}{{(n - k)!k!}} = \frac{n}{k} \cdot \frac{{(n - 1)!}}{{(n - k + 1 - 1)(k - 1)!}} = \\
+		\frac{n}{k} \cdot \frac{{(n - 1)!}}{{((n - 1) - (k - 1))(k - 1)!}} = \frac{n}{k} \cdot C(n - 1,k - 1) \Rightarrow \\
+		C(n,k) = \frac{n}{k} \cdot C(n - 1,k - 1) \Rightarrow k \cdot C(n,k) = n \cdot C(n - 1,k - 1)
+		\end{array}\]
+
+		Lembrando que $q = 1 - p$. Seja $n$ o número de ensaios e $k$ k número de sucessos.
+		Lembrando que $p(X=k)=C(n,k)=p^kq^{n-k}$. Então:
+
+		\[\begin{array}{l}
+		E(X) = \sum\limits_{k = 1}^n {X(k)p(X = k)}  = \\
+		\sum\limits_{k = 1}^n {k \cdot C(n,k){p^k}{q^{n - k}}}  = \sum\limits_{k = 1}^n {n \cdot C(n - 1,k - 1){p^k}{q^{n - k}}}  = \\
+		n\sum\limits_{k = 1}^n {C(n - 1,k - 1){p^k}{q^{n - k}}} \underbrace  = _{j = k - 1}n\sum\limits_{j = 0}^{n - 1} {C(n - 1,j){p^{j + 1}}{q^{n - j + 1}}}  = \\
+		np\underbrace {\sum\limits_{j = 0}^{n - 1} {C(n - 1,j){p^j}{q^{n - j + 1}}} }_{{{(p + q)}^{n - 1}}} = np{(p + q)^{n - 1}} = np{(p + (1 - p))^{n - 1}} = \\
+		np{(1)^{n - 1}} = np
+		\end{array}\]
+	\end{enumerate}

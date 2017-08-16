@@ -1,0 +1,42 @@
+\item
+  De princípio, definimos:
+  \begin{itemize}
+    \item $H$: HIV positivo
+
+    \item $\overline{H}$: HIV negativo
+    \item $T$: teste indica HIV positivo
+    \item $\overline{T}$: teste indica HIV positivo
+  \end{itemize}
+
+  Pelo enunciado, temos:
+  \[\begin{array}{l}
+  p(H) = 0.08\\
+  p(\overline{H}) = 1 - p(H) = 1 - 0.08 = 0.92\\
+  p(T|H) = 0.98\\
+  p(\overline{T}|H) = 1-p(T|H) = 0.02\\
+  p(T|\overline{H}) = 0.03\\
+  p(\overline{T}|\overline{H}) = 1-p(T|\overline{H}) = 0.97
+  \end{array}\]
+
+  \begin{enumerate}
+    \item
+    Utilizando o Teorema de Bayes.
+    \[\begin{array}{l}
+    p(H|T) = \frac{{p(T|H)p(H)}}{{p(T|H)p(H) + p(T|\overline{H})p(\overline{H})}}\\
+     = \frac{{0.98 \cdot 0.08}}{{0.98 \cdot 0.08 + 0.03 \cdot 0.92}} \approx 0.739
+    \end{array}\]
+
+    \item
+    \[p(\overline{H}|T) = 1 - p(H|T) \approx 1 - 0.739 = 0.261\]
+
+    \item
+    Utilizando o Teorema de Bayes.
+    \[\begin{array}{l}
+    p(H|\overline {T}) = \frac{{p(\overline {T}|H)p(H)}}{{p(\overline {T}|H)p(H) + p(\overline {T}|\overline {H})p(\overline {H})}}\\
+     = \frac{{0.02 \cdot 0.08}}{{0.02 \cdot 0.08 + 0.97 \cdot 0.92}} \approx 0.002
+    \end{array}\]
+
+    \item
+    \[p(\overline{H}|\overline{T}) = 1 - p(H|\overline{T}) \approx 1 - 0.002 = 0.998\]
+
+  \end{enumerate}

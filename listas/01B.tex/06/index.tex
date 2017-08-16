@@ -1,0 +1,27 @@
+
+\item
+  \begin{enumerate}
+    \item
+
+    % \[E\left( {{X_1}^2 + 2{X_1}\sum\nolimits_{i = 2}^n {{X_i}}  + {{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - {\left( {E\left( {{X_1}} \right) + E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)^2}\]
+    %
+    % \begin{dmath}
+    %   = E({X_1}^2) + \underbrace {E\left( {2{X_1}\sum\nolimits_{i = 2}^n {{X_i}} } \right)}_{2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} + E\left( {{{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - \left( {E{{\left( {{X_1}} \right)}^2} + 2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right) + {{\left( {E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)}^2}} \right)
+    % \end{dmath}
+
+    \begin{dmath*}
+      V\left( {\sum\nolimits_{i = 1}^n {{X_i}} } \right) = E\left( {{{\left( {\sum\nolimits_{i = 1}^n {{X_i}} } \right)}^2}} \right) - E{\left( {\sum\nolimits_{i = 1}^n {{X_i}} } \right)^2}\\
+       = V\left( {{X_1} + \sum\nolimits_{i = 2}^n {{X_i}} } \right) = E\left( {{{\left( {{X_1} + \sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - E{\left( {{X_1} + \sum\nolimits_{i = 2}^n {{X_i}} } \right)^2}\\
+       = E\left( {{X_1}^2 + 2{X_1}\sum\nolimits_{i = 2}^n {{X_i}}  + {{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - {\left( {E\left( {{X_1}} \right) + E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)^2}\\
+       = E({X_1}^2) + \underbrace {E\left( {2{X_1}\sum\nolimits_{i = 2}^n {{X_i}} } \right)}_{2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} + E\left( {{{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - \left( {E{{\left( {{X_1}} \right)}^2} + 2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right) + {{\left( {E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)}^2}} \right)\\
+       = E({X_1}^2) + 2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right) + E\left( {{{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - E{\left( {{X_1}} \right)^2} - 2E\left( {{X_1}} \right)E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right) - {\left( {E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)^2}\\
+       = E({X_1}^2) + E\left( {{{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - E{\left( {{X_1}} \right)^2} - {\left( {E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)^2}\\
+       = \underbrace {E({X_1}^2) - E{{\left( {{X_1}} \right)}^2}}_{V({X_1})} + \underbrace {E\left( {{{\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}^2}} \right) - {{\left( {E\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)} \right)}^2}}_{V\left( {\sum\nolimits_{i = 2}^n {{X_i}} } \right)}
+    \end{dmath*}
+
+
+    Se refizermos a operação para as somas restantes ${\sum\nolimits_{i = 2}^n {{X_i}} }$, teremos:
+
+    \[V\left( {\sum\nolimits_{i = 1}^n {{X_i}} } \right) = V({X_1}) + V({X_2}) +  \ldots V({X_n}) = \sum\nolimits_{i = 1}^n {V({X_i})} \]
+
+  \end{enumerate}

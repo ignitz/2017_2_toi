@@ -1,0 +1,18 @@
+\item
+  Seja $X$ uma variável aleatória no espaço $S$. Variância de $X$ é:
+
+  \[V(X) = \sum\limits_{s \in S} {{{\left( {X(s) - E(X)} \right)}^2}p(s)} \]
+
+  \[\begin{array}{l}
+  V(X) = \sum\limits_{s \in S} {{{\left( {X(s) - E(X)} \right)}^2}p(s)}  = \\
+  \sum\limits_{s \in S} {\left( {X(s){^2} - 2X(s)E(X) + E(X){^2}} \right)p(s)}
+  \end{array}\]
+
+  Utilizando a linearidade.
+
+  \[\begin{array}{l}
+  \sum\limits_{s \in S} {X(s){^2}p(s)}  - 2\sum\limits_{s \in S} {X(s)E(X)p(s)}  + \sum\limits_{s \in S} {E(X){^2}p(s)}  = \\
+  \underbrace {\sum\limits_{s \in S} {\left( {X(s)} \right){^2}p(s)} }_{E({X^2})} - 2E(X)\underbrace {\sum\limits_{s \in S} {X(s)p(s)} }_{E(X)} + E(X){^2}\underbrace {\sum\limits_{s \in S} {p(s)} }_1 = \\
+  E({X^2}) - 2{\left( {E(X)} \right)^2} + {\left( {E(X)} \right)^2} = E({X^2}) - E{(X)^2} \Rightarrow \\
+  V(X) = E({X^2}) - E{(X)^2}
+  \end{array}\]
