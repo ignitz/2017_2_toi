@@ -1,0 +1,15 @@
+\item
+Primeiro, temos como hipóteses, $p(E)=0.7$ e $p(F)=0.5$... e só... T\_T.
+
+Sabemos que $E, F \subset S$, $S$ é o espaço amostral, o que implica
+em $p(E \cup F) \le 1$, pois não foi garantido que $E \cup F = S$.
+
+Obviamente, $E \subset (E \cup F)$, assim $p(E) \le p(E \cup F) \Rightarrow 0.7 \le p(E \cup F)$.
+
+Agora para provarmos que $p(E \cap F) \ge 0.2$, temos que $p(E \cup F) \le p(S) = 1$.
+Utilizando o princípio da inclusão e exclusão, temos:
+
+\[\begin{array}{l}
+p(E \cup F) \le 1 \Rightarrow \underbrace {p(E)}_{0.7} + \underbrace {p(E)}_{0.5} - p(E \cap F) \le 1 \Rightarrow \\
+1.2 - 1 \le p(E \cap F) \Rightarrow p(E \cap F) \ge 0.2
+\end{array}\]

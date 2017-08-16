@@ -1,0 +1,15 @@
+\item
+Por hipótese, $p(E \cap F) = p(E) \cdot p(F)$. Queremos saber se
+$p(\overline{E} \cap F) = p(\overline{E}) \cdot p(F)$.
+
+Brincando com conjuntos, temos:
+
+\[\begin{array}{l}
+p(F) = p\left( {\left( {F \cap E} \right) \cup \left( {F \cap \overline E } \right)} \right) = \\
+p\left( {F \cap E} \right) + p\left( {F \cap \overline E } \right) - \underbrace {p\left( {\left( {F \cap E} \right) \cap \left( {F \cap \overline E } \right)} \right)}_{p\left( {F \cap E \cap F \cap \overline E } \right) = p\left( {F \cap E \cap \overline E } \right) = 0} \Rightarrow \\
+p(F) = \underbrace {p\left( {F \cap E} \right)}_{p(F) \cdot p(E)} + p\left( {F \cap \overline E } \right) \Rightarrow \\
+p(F) - p(F) \cdot p(E) = p\left( {F \cap \overline E } \right) \Rightarrow \\
+p\left( {F \cap \overline E } \right) = p(F) \cdot \underbrace {\left( {1 - p(E)} \right)}_{p\left( {\bar E} \right)} = p(F) \cdot p\left( {\bar E} \right)
+\end{array}\]
+
+Que é o que queriamos provar.

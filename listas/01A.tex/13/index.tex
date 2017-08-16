@@ -1,0 +1,32 @@
+\item
+% b) If the family has four children, then there are 16 equally likely outcomes, since there are 16 strings of length
+% 4 consisting of B's and G's. All but two of these outcomes give children of both sexes, so p(E) = 14/16.
+% Only five of them result in at most one boy, so p(F) = 5/16. There are four ways to have children of both
+% sexes and at most one boy, so p(E n F) = 4/16. Since p(E) · p(F) = 35/128 -=/:- 4/16, the events are not
+% independent.
+
+Seja $M = $ masculino e $F = $ feminino.
+
+Representamos os quatro filhos como uma string de tamanho $4$. Logo, $|S|=2^4= 16$.
+
+Seja $E$ dos $4$ terem meninos e meninas, temos:
+
+\[p(E) = p(S) - p\left( {\overline E } \right) = 1 - p(MMMM) - p(FFFF) = 1 - \frac{1}{{16}} - \frac{1}{{16}} = \frac{{14}}{{16}}\]
+
+Seja $F$ dos eventos que tem um menino:
+
+\[p(F) = p(MFFF) + p(FMFF) + p(FFMF) + p(FFFM) = \frac{4}{{16}}\]
+
+$E \cap F$:
+
+\[p(F \cap E) = p(MFFF) + p(FMFF) + p(FFMF) + p(FFFM) = \frac{4}{{16}}\]
+
+O que implica que:
+
+\[p(F \cap E) = p(F) = \frac{4}{{16}}\]
+
+Se fosse independente:
+
+\[p(F \cap E) = p(F) \cdot p(E) \Rightarrow \frac{4}{{16}} = \frac{4}{{16}}.p(E) \Rightarrow p(E) = 1\]
+
+O que é falso, pois $p(E)= \frac{14}{16}$.

@@ -1,0 +1,38 @@
+\item
+Primeiro na situação em que dois dados são jogados darem a soma 9.
+
+Mostrando os pares que a soma dar 9:
+
+\[\begin{array}{l}
+E = \{ (3,6),(4,5),(5,4),(6,3)\} \\
+S = \{ 1, \ldots ,6\} {^2}\\
+p(E) = \frac{{|E|}}{{|S|}} = \frac{4}{{36}} = \frac{1}{9} \approx 0.111
+\end{array}\]
+
+Na situação em que 3 dados darem a soma 9.
+
+Aqui fiquei com preguiça de listar tudo.
+
+$x_i$ representa o resultado do i-ésimo dado tal que $x_1,x_2,x_3 \in {1..6}$.
+
+$x_1 + x_2 + x_3 = 9$
+
+Se subtrairmos 1 em cada $x_i$, temos:
+
+\[\begin{array}{l}
+\underbrace {({x_1} - 1)}_{{x_1}'} + \underbrace {({x_2} - 1)}_{{x_2}'} + \underbrace {({x_3} - 1)}_{{x_3}'} = 9 - (1 + 1 + 1) \Rightarrow {x_1}' + {x_2}' + {x_3}' = 6\\
+{x_i}' \in \{ 0, \ldots ,5\}
+\end{array}\]
+
+Observe que agora a cardinalidade das somas possíveis é a mesma que a permutação
+da string ||||||++ menos os 3 resultados que um dos $x_i = 6$:
+
+\{||||||++, +||||||+, ++||||||\}
+
+Assim, $C(6 + 2,2) - 3 = C(8,2) - 3 = 28 - 3 = 25$.
+
+O espaço amostral é $S=\{0..5\}^3 \Rightarrow |S|=6^3$.
+
+\[p(E) = \frac{{|E|}}{{|S|}} = \frac{{25}}{{{6^3}}} = \frac{{25}}{{216}} \approx 0.115\]
+
+Logo, o segundo caso é mais provável.
