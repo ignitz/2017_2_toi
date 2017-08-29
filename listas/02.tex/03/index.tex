@@ -1,6 +1,24 @@
 \item
 	Exercise 2.37.[2] The inhabitants of an island tell the truth one third of the
-	time. They lie with probability $2/3$.
+	time. They lie with probability $2/3$.\\
 	On an occasion, after one of them made a statement, you ask another
-	`was that statement true?' and he says `yes'.
+	`was that statement true?' and he says `yes'.\\
 	What is the probability that the statement was indeed true?
+
+\subsection*{Resposta}
+
+\begin{itemize}
+	\item $D$: Declaração do habitante ser verdadeira.
+	\item $R$: Resposta de 'yes' do mesmo habitante.
+	\item $P(R|D)$: Responde verdade sendo que a primeira é verdadeira.
+	\item $P(R|\overline{D})$: Responde mentira sendo que a primeira é mentira.
+	\item $P(D = true) = P(D) = \frac{1}{3}$
+	\item $P(R = true) = P(R) = \frac{1}{3}$
+\end{itemize}
+
+Queremos saber $P(D|R)$:
+
+\[\begin{array}{l}
+P(R) = P(R|D) + P(R|\overline{D}) = \frac{1}{3} \cdot \frac{1}{3} + \frac{2}{3} \cdot \frac{2}{3}\\
+P(D|R) = \frac{{P(D,R)}}{{P(R)}} = \frac{{\frac{1}{3}.\frac{1}{3}}}{{\frac{1}{3} \cdot \frac{1}{3} + \frac{2}{3} \cdot \frac{2}{3}}} = \frac{5}{9}
+\end{array}\]

@@ -5,10 +5,10 @@
 	up his wife on at least nine previous occasions. The prosecution advances
 	this data as evidence in favour of the hypothesis that Mr S is guilty of the
 	murder. `Ah no,' says Mr S's highly paid lawyer, `\textit{statistically}, only one
-	in a thousand wife-beaters actually goes on to murder his wife.1 So the
+	in a thousand wife-beaters actually goes on to murder his wife. So the
 	wife-beating is not strong evidence at all. In fact, given the wife-beating
 	evidence alone, it's extremely \textit{unlikely} that he would be the murderer of
-	his wife - only a $1/1000$ chance. You should therefore nd him innocent.'
+	his wife - only a $1/1000$ chance. You should therefore find him innocent.'
 	Is the lawyer right to imply that the history of wife-beating does not
 	point to Mr S's being the murderer? Or is the lawyer a slimy trickster?
 	If the latter, what is wrong with his argument?
@@ -16,3 +16,40 @@
 	paragraph, I'd like to add an extra inference exercise at this point: \textit{Does
 	my suggestion that Mr. S.'s lawyer may have been a slimy trickster imply
 	that I believe all lawyers are slimy tricksters?} (Answer: No.)]
+
+\subsection*{Resposta}
+
+Definindo as hipóteses:
+
+\begin{itemize}
+	\item $M$: Senhor S matou senhora S.
+	\item $A$: Senhora S foi assassinada.
+	\item $B$: Senhor S já bateu em senhora S.
+	\item O advogado falou que $P(M|B)=\frac{1}{1000}$.
+\end{itemize}
+
+Pelo teorema de Bayes.
+
+\[P(M|A,B) = \frac{{P(A|M,B)P(M,B)}}{{P(A|B)}}\]
+
+É fácil ver que $P(A|M,B)=1$.
+
+\[P(M|A,B) = \frac{{P(M,B)}}{{P(A|B)}}\]
+
+
+O conjunto $A$ pode ser particionado em:
+
+\begin{itemize}
+	\item $M$: Senhor S assassinou senhora S.
+	\item $O$: qualquer outra pessoa assassinou senhora S.
+\end{itemize}
+
+Temos duas razões diferentes.
+
+\[\frac{{P(M,B)}}{{P(A|B)}}?\frac{{P(M,B)}}{{P(O|B)}}\]
+
+É bem mais evidente que a fração da esquerda é maior que da direita. Logo,
+o argumento do advogado é uma falácia.
+
+% Solução completa na questão 6a
+% https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/assignments/MIT18_05S14_ps5_solutions.pdf
