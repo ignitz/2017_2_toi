@@ -1,6 +1,47 @@
 \item Answer formally the following questions:
 \begin{enumerate}
-  \item Describe succinctly the two most common interpretations of probability: the frequentist interpretation, and the Bayesian interpretation.
-  \item Define the concepts of forward probability and of inverse probability.
-  \item What is the difference between the terms likelihood and probability? In what situation should each of them be used?
+  \item Describe succinctly the two most common interpretations of probability: the \textit{frequentist} interpretation, and the \textit{Bayesian interpretation}.
+  \item Define the concepts of \textit{forward probability} and of \textit{inverse probability}.
+  \item What is the difference between the terms \textit{likelihood} and \textit{probability}? In what situation should each of them be used?
+\end{enumerate}
+
+\subsection*{Resposta}
+
+\begin{enumerate}
+  \item
+  \textbf{Interpretação frequentista}
+  \begin{itemize}
+    \item Se jogarmos uma moeda 100 vezes e der como resultado cara 55 vezes.
+    Então a probabilidade estimada é 0.55.
+    \item A cada 1.2 milhão de voos de avião, um deles sofre acidente.
+    Então a probabilidade estimada é $\frac{1}{12 \cdot 10^5}$.
+  \end{itemize}
+
+  \textbf{Interpretação Bayesiana}
+
+  \begin{itemize}
+    \item Se eu tenho certeza que a moeda é justa (não-viciada). A minha "crença"
+    de que a probabilidade da moeda dar cara se jogada uma vez é $0.5$.
+
+    \item Dado que sei que a moeda possui cara nas duas faces. A probabilidade de
+    dar resultado cara é $1$. (Atualizar uma probabilidade posterior).
+  \end{itemize}
+
+  \item
+  \textbf{Forward probability} descreve um modelo geral de um processo assumindo
+  certos dados.
+  % problems involve a generative model that describes a
+  % process that is assumed to give rise to some data.
+  % The task is to compute the probability distribution or expectation of some
+  % quantity that depends on the data.
+
+  \item
+  \textbf{inverse probability} descreve um modelo em que é calculado a
+  probabilidade   condicional de um ou mais variáveis não observadas no
+  processo, dado tais variáveis observadas.
+  % problems involve a generative model of a process.
+  % But instead of computing the probability distribution of some quantity
+  % produced by the process, we compute the conditional probability of one or
+  % more of the unobserved variables in the process, given the observed variables.
+
 \end{enumerate}
