@@ -1,0 +1,17 @@
+(Thomas\&Cover 2.1) (The entropy of a countably infinite probability distribution) [Medium] A fair coin is flipped until the first head occurs. Let $X$ denote the number of flips required. Find the entropy $H(X)$ in bits. (The following expressions may be useful: $\sum\nolimits_{n = 0}^\infty  {{r^n} = 1/(1 - r)} $, and $\sum\nolimits_{n = 0}^\infty  {n{r^n} = 1/(1 - r){^2}} $.
+
+\subsection*{Resposta}
+
+A probilidade de atingir a primeira cara da moeda jogada em $n$ tentativas é $P(X=n) = q^{n-1}p$, sendo que a moeda é justa. Assim, temos:
+
+\[p = q = \frac{1}{2} \Rightarrow P(X = n) = \frac{1}{2} \cdot \frac{1}{{{2^{n - 1}}}} = \frac{1}{{{2^n}}}\]
+
+Calculando a entopia:
+
+\[\begin{array}{l}
+\displaystyle H(X) = \sum\limits_{n = 1}^\infty  {\frac{1}{{{2^n}}} \cdot {{\log }_2}\frac{1}{{1/{2^n}}}} \\
+\displaystyle = \sum\limits_{n = 1}^\infty  {\frac{1}{{{2^n}}} \cdot \underbrace {{{\log }_2}{2^n}}_{ = n}}  = \sum\limits_{n = 1}^\infty  {\frac{n}{{{2^n}}}} \\
+\displaystyle = \sum\limits_{n = 1}^\infty  {\frac{n}{{{2^n}}}}  + 0 = \sum\limits_{n = 0}^\infty  {n{{\left( {\frac{1}{2}} \right)}^n}} \\
+\displaystyle = \frac{{1/2}}{{{{\left( {1 - 1/2} \right)}^2}}} = \frac{{1/2}}{{1/{2^2}}} = \frac{1}{{1/2}} = 2\;{\rm{bits}}
+\end{array}\]
+

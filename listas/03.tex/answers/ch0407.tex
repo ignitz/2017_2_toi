@@ -1,0 +1,18 @@
+(MacKay 4.9) [Easy] While some people, when they first encounter the weighing problem with $12$ balls and the three-outcome balance (exercise 4.1 (p.66)), think that weighing six balls against six balls is a good first weighing, others say 'no, weighing six against six conveys no information at all'. Explain to the second group why they are both right and wrong. Compute the information gained about \textit{which is the odd ball}, and the information gained about \textit{which is the odd ball and whether it is heavy or light}.
+
+\subsection*{Resposta}
+
+Porque intuitivamente as pessoas pensam que pode eliminar metade do conjunto das bolas. Mas o detalhe de uma bola é mais pesada ou mais leve que as outras da origem a uma ambiguidade que não é possível determinar se o conjunto mais pesado é o que tem a bola mais pesada ou o que subiu contém a mais leve.
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.65]{img/image.pdf}
+\end{figure}
+
+A informação ganha da bola ser mais pesada ou leve é:
+
+\[h(x) = {\log _2}\frac{1}{{p(x)}} = {\log _2}\frac{1}{{1/24}} \approx 4.58\]
+
+A informação ganha de qual é a bola fora do padrão, os dois ao mesmo tempo, é:
+
+\[h(x,y) = h(x) + h(y) \approx 9.16\]

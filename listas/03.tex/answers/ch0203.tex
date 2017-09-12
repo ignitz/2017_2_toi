@@ -1,0 +1,34 @@
+(Upper bound for Shannon entropy) The following exercises are designed so you can prove an upper bound for Shannon entropy.
+
+\begin{enumerate}
+	\item (MacKay 2.21) [Easy] Let $p_a = 0.1$, $p_b = 0.2$, and $p_c = 0.7$. Let $f(a) = 10$, $f(b) = 5$, and $f(c) = 10/7$. What is $\mathcal{E}[f(x)]$? What is $\mathcal{E}[1/P(x)]$?
+	
+	\item (MacKay 2.22) [Easy] For an arbitrary ensemble, what is $\mathcal{E}[1/f(x)]$?
+	
+	\item (MacKay 2.25) [Hard] Prove the assertion that $H(X) \le \log(|A_X|)$ with equality iff $p_i = 1/|A_X|$ for all $i$. ($|A_X|$ denotes the number of elements in the set $A_X$.) [Hint: use Jensen's inequality (2.48); if your first attempt to use Jensen does not succeed, remember that Jensen involves both a random variable and a function, and you have quite a lot of freedom in choosing these; think about whether your chosen function $f$ should be convex or concave.]
+	
+\end{enumerate}
+
+\subsection*{Resposta}
+
+\begin{enumerate}
+    % a)
+    \item
+    \[\begin{array}{l}
+    \displaystyle \mathcal{E}[f(x)] = \sum\limits_{k \in \{ a,b,c\} } {{p_k}f(k)} \\
+    \displaystyle = {p_a}f(a) + {p_b}f(b) + {p_c}f(c)\\
+    \displaystyle = 0.1 \cdot 10 + 0.2 \cdot 5 + 0.7 \cdot \frac{{10}}{7} = 3
+    \end{array}\]
+    
+    \[{\cal E}\left[ {\frac{1}{{P(x)}}} \right] = {\cal E}\left[ {f(x)} \right] = 3\]
+    
+    % b)
+    \item
+    \[\mathcal{E} \left[ {\frac{1}{{P(x)}}} \right] = \sum\limits_{x \in {A_X}} {\frac{P(x)}{{P(x)}}}  = \sum\limits_{x \in {A_X}} 1  = |{A_X}|\]
+    
+    % c)
+    \item
+    TODO
+
+\end{enumerate}
+

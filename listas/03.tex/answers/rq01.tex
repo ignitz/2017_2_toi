@@ -1,0 +1,82 @@
+Answer formally the following questions:
+
+\begin{enumerate}
+    \item Define the Shannon information content $h(x)$ of the outcome $x$ of a random experiment. Explain what the value $h(x)$ means.
+    \item Define the entropy $H(X)$ of an ensemble $X$. Explain what the value $H(X)$ means.
+    \item Define what is a convex function. Give at least two examples of functions that are convex, and at least two of functions that are not.
+    \item State \textit{Jensen's inequality}.
+    \item What is the formula for the raw bit content of an ensemble $X$? What does it mean?
+    \item Given an ensemble $X$, what is its smallest $\delta$-sufficient subset $S_{\delta}$?
+    \item Given an ensemble $X$ and a value $0 < \delta < 1$, what is the essential bit content $H_{\delta}(X)$? What does it mean?
+    \item Shannon's source coding theorem can be stated as follows: If $X$ is an ensemble with entropy $H(X) = H$ bits, then given any $\epsilon > 0$ and $0 < \delta < 1$, there exists a positive integer $N_0$ such that for $N > N_0$,
+    
+    \[\left| {\frac{1}{N}{H_\delta }\left( {{X^N}} \right) - H} \right| < \epsilon\]
+    
+    Explain what it means for data compression.
+\end{enumerate}
+
+\subsection*{Resposta}
+
+\begin{enumerate}
+	\item
+	O índice de informação de Shannon é definido como:
+	
+	\[ h(x) = {\log _2}\frac{1}{{p(x)}} \]
+	
+	Representa em um número real o qual relevante é a informação para o contexto utilizado.
+	
+	\item
+	A entropia é:
+	
+	\[\begin{array}{l}
+    \displaystyle H(X) = \sum\limits_{x \in {A_X}} {p(x){{\log }_2}\frac{1}{{p(x)}}} \\
+    \displaystyle =  - \sum\limits_{x \in {A_X}} {p(x){{\log }_2}p(x)} 
+    \end{array}\]
+	
+	tem como objetivo em medir a diversidade em um conjunto de dados.
+	
+	\item
+	Uma função é convexa em um intervalo $(a, b)$ quando  $\forall x_1, x_2 \in (a, b)$ e $0 \le \lambda \le 1$, temos:
+	
+	\[f(\lambda {x_1} + (1 - \lambda ){x_2}) \le \lambda f({x_1}) + (1 - \lambda )f({x_2})\]
+	
+	Exemplo de duas funções que são convexas no domínio dos reais:
+	
+	\begin{itemize}
+	    \item $f(x) = x^2$
+	    \item $f(x) = e^x$
+	\end{itemize}
+	
+	Exemplo de duas funções que não são convexas no domínio dos reais:
+	
+	\begin{itemize}
+	    \item $f(x) = x^3$
+	    \item $f(x) = \ln x$
+	\end{itemize}
+	
+	\item
+	Se $f$ é uma função convexa e $x$ é uma variável aleatória, então a desigualdade de Jensen é:
+	
+	\[E\left[ {f(x)} \right] \ge f\left( {E[x]} \right)\]
+	
+	Sendo $E[X]$ é a esperança.
+	
+	\item
+	\textit{raw bit content} de um conjunto é:
+	
+	\[{H_0}(X) = {\log _2}|{A_X}|\]
+	
+	Representa a quantidade de bits necessário para identificar cada elemento do conjunto $X$.
+	
+	\item
+	\textit{Principle of lossy data compression} é uma medida da máxima compressão com probabilidade de erro tolerado no máximp $\delta$ utilizando um subconjunto de palavras-chave de tamanho $\log _2 |S_\delta|$
+	
+	TODO, não entendi direito o que a questão qur.
+	
+	\item
+	Se é aceito uma probabilidade de erro de $\delta$m $H_\delta (X)$ indica quantos bits será necessário pra codificar cada símbolo.
+	
+	\item
+	O teorema mostr que se você está codificando $N$ símbolos do conjunto $X$ e aceita um erro $\delta$, a compressão irá usar aproximandamente $H(X) = H$ bits por símbolo se o $N$ for muito grande. (Definição de limite do cálculo)
+	
+\end{enumerate}

@@ -1,0 +1,28 @@
+(MacKay 4.2) [Easy] Show that, if $x$ and $y$ are independent, the entropy of the outcome $x$, $y$ satisfies
+
+\[H(X,Y) = H(X) + H(Y)\]
+
+In words, entropy is additive for independent variables.
+
+\subsection*{Resposta}
+
+Dado que $p(x,y) = p(x)p(y)$.
+
+\[\begin{array}{l}
+H(X,Y) = \sum\limits_x {\sum\limits_y {p(x,y)\log \frac{1}{{p(x,y)}}} } \\
+ = \sum\limits_x {\sum\limits_y {p(x)p(y)\log \frac{1}{{p(x)p(y)}}} } \\
+ = \sum\limits_x {\sum\limits_y {p(x)p(y)\log {{\left[ {p(x)p(y)} \right]}^{ - 1}}} } \\
+ =  - \sum\limits_x {\sum\limits_y {p(x)p(y)\log \left[ {p(x)p(y)} \right]} } \\
+ =  - \sum\limits_x {\sum\limits_y {p(x)p(y)\left[ {\log p(x) + \log p(y)} \right]} } \\
+ =  - \sum\limits_x {\sum\limits_y {\left[ {p(x)p(y)\log p(x) + p(x)p(y)\log p(y)} \right]} } 
+\end{array}\]
+
+Como a soma é finita podemos separar em duas somas.
+
+\[\begin{array}{l}
+ - \sum\limits_x {\sum\limits_y {p(x)p(y)\log p(x)} }  - \sum\limits_x {\sum\limits_y {p(x)p(y)\log p(y)} } \\
+ =  - \sum\limits_x {p(x)\log p(x)\underbrace {\sum\limits_y {p(y)} }_{ = 1}}  - \sum\limits_y {p(y)\log p(y)\underbrace {\sum\limits_x {p(x)} }_{ = 1}} \\
+ = \sum\limits_x {p(x)\log p{{(x)}^{ - 1}}} + \sum\limits_y {p(y)\log p{{(y)}^{ - 1}}} \\
+ = \underbrace {\sum\limits_x {p(x)\log \frac{1}{{p(x)}}} }_{H(X)} + \underbrace {\sum\limits_y {p(y)\log \frac{1}{{p(y)}}} }_{H(Y)} \\
+ = H(X) + H(Y)
+\end{array}\]

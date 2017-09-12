@@ -1,0 +1,7 @@
+(MacKay 4.5) [Medium] Could there be a compressor that maps an outcome $x$ to a binary code $c(x)$, and a decompressor that maps $c$ back to $x$, such that \textit{every possible outcome} is compressed into a binary code of length \textit{shorter} than $H_0(X)$ bits?
+
+\subsection*{Resposta}
+
+Não. Pelo princípio da casa dos pombos haverá dois números representados pela mesma string de bits se for tentar alocar com tamanho $H_0(X)$ bits.
+
+Em outras palavras, como $c(x)$ é bijetiva e o conjunto é finito. Então o domínio e contradomínio possuem a mesma cardinalidade. Se o domínio ou contradomínio tiver cardinalidades diferentes a função não é bijetiva. 

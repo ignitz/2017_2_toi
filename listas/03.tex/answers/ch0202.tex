@@ -1,0 +1,24 @@
+(Lower bound for Shannon entropy) [Easy] Show that for every ensemble $X = \left(x,A_{X},P_{X}\right)$, it is the case that $H(X) \ge 0$.
+
+\subsection*{Resposta}
+
+$\forall x \in A_X \Rightarrow 0 \le p(x) \le 1$. Então,
+
+\[\begin{array}{l}
+\displaystyle 0 \le p(x) \le 1 \Rightarrow \frac{1}{{p(x)}} \ge 1\\
+\displaystyle {\log _2}\frac{1}{{p(x)}} \ge {\log _2}1 = 0
+\end{array}\]
+
+O produto de dois valores não negativos é também não negativo.
+
+\[p(x){\log _2}\frac{1}{{p(x)}} \ge 0\]
+
+Como a soma $H(X)$ são de valores não negativos, então:
+
+\[\begin{array}{l}
+p({x_1}){\log _2}\frac{1}{{p({x_1})}} \ge 0\\
+p({x_1}){\log _2}\frac{1}{{p({x_1})}} \ge 0\\
+ \ldots \\
+p({x_n}){\log _2}\frac{1}{{p({x_n})}} \ge 0\\
+\underbrace {p({x_1}){{\log }_2}\frac{1}{{p({x_1})}} +  \ldots  + p({x_n}){{\log }_2}\frac{1}{{p({x_n})}}}_{H(X)} \ge 0
+\end{array}\]
