@@ -1,0 +1,64 @@
+(MacKay 5.21) [Medium]
+Make Huffman codes for $X^2$, $X^3$ and $X^4$ where $AX = \{0, 1\}$ and $P_X = \{0.9, 0.1\}$. Compute their expected lengths and compare them with the entropies $H(X^2)$, $H(X^3)$ and $H(X^4)$.
+
+Repeat this exercise for $X^2$ and $X^4$ where $P_X = \{0.6, 0.4\}$.
+
+You only need to do:
+\begin{enumerate}
+    \item $X^2$ and $X^3$ when $P_X = {0.9, 0.1}$; and
+    
+    \item $X^2$ when $P_X = {0.6, 0.4}$.
+\end{enumerate}
+
+\subsection*{Resposta}
+
+Defino que o tamanho esperado da codificação $C$:
+
+\[L(C, X) = \sum_{x \in A_X}{p(x)l(x)} = \sum_{i = 1}{p_i l_i}\]
+
+\begin{itemize}
+    \item 
+    A codificação Huffman para $X^2$ onde $A_X = \{0, 1\}$ e $P_X = \{0.9, 0.1\}$ é $\{00, 01, 10, 11\} \rightarrow \{1, 01, 000, 001\}$. Este código tem $L(C, X^2) = 1.29$, onde $H(X^2)$ é $0.938$.
+    
+    \item
+    A codificação Huffman para $X^3$ é
+    \[\begin{array}{l}
+        \{ 000,100,010,001,101,011,110,111\}  \to \\
+        \{ 1,011,010,001,00000,00001,00010,00011\} 
+        \end{array}\]
+    
+    Tendo tamanho esperado $L(C, X^4) = 1.9702$ com $H(X^4) = 1.876$.
+    
+    \item
+    Agora com $P_X = \{0.6, 0.4\}$ os tamanhos para o código de Huffman de $X^2$ tem tamanho $\{2, 2, 2, 2\}$ e o tamanho esperado é 2 bits (se parar pra pensar se aproxima de $P_X = \{0.5, 0.5\}$), e a entropia é 1.94 bits.
+    
+    \item
+    Para $X^4$ com $P_X = \{0.6, 0.4\}$:
+    
+    \begin{tabular}{c c c c}
+    \hline
+    $a_i$ & $p_i$ & $l_i$ & $c(a_i)$ \\
+    \hline
+    $0000$ & $0.1296$ & $3$ & $000$ \\
+    $0001$ & $0.0864$ & $4$ & $0100$ \\
+    $0010$ & $0.0864$ & $4$ & $0110$ \\
+    $0100$ & $0.0864$ & $4$ & $0111$ \\
+    $1000$ & $0.0864$ & $3$ & $100$ \\
+    $1100$ & $0.0576$ & $4$ & $1010$ \\
+    $1010$ & $0.0576$ & $4$ & $1100$ \\
+    $1001$ & $0.0576$ & $4$ & $1101$ \\
+    $0110$ & $0.0576$ & $4$ & $1110$ \\
+    $0101$ & $0.0576$ & $4$ & $1111$ \\
+    $0011$ & $0.0576$ & $4$ & $0010$ \\
+    $1110$ & $0.0384$ & $5$ & $00110$ \\
+    $1101$ & $0.0384$ & $5$ & $01010$ \\
+    $1011$ & $0.0384$ & $5$ & $01011$ \\
+    $0111$ & $0.0384$ & $4$ & $1011$ \\
+    $1111$ & $0.0256$ & $5$ & $00111$ \\
+    \hline
+    \end{tabular}
+    
+\end{itemize}
+
+
+

@@ -1,0 +1,33 @@
+Answer formally the following questions:
+
+\begin{enumerate}
+	\item What is a symbol code for an ensemble? What is an extended code for an ensemble?
+	\item When is a symbol code uniquely decodable? When is a symbol code prefix-free?
+	\item State Kraft's inequality and explain in what sense it is related to the notion of which prefix-free codes are actually possible.
+	\item Explain what the Source coding theorem for symbol codes means in terms of the limits of compression of an ensemble.
+\end{enumerate}
+
+\subsection*{Resposta}
+
+\begin{enumerate}
+    \item Uma codificação para um \textit{ensemble} $X$ é uma função $C: A_X \rightarrow D^+$ que mapeia cada símbolo $a_i \in A_X$ de um \textit{ensemble} para uma string na codificação do alfabeto $D$.
+    
+    \item Um código de símbolo é \textit{uniquely decodeable} se não tem como duas strings formadas por símbolos de um \textit{ensemble} em uma mesa codificação.
+    
+    Um código $C$ é \textit{uniquely decodeable} se $\forall x, y \in A_{X}^+$ temos que $x \ne y \Rightarrow c^+(x) \ne c^+(y)$.
+    
+    Um código de símbolo é livre de prefixo se nenhuma codificação é um prefixo de qualquer \textit{codeword}.
+    
+    \item A inequação de Kraft garante que para qualquer código livre de prefixo $C(X)$ sobre um alfabeto tendo $D$ símbolos, o tamanho do código tem que satisfazer a inequação
+    
+    $\displaystyle \sum_{i=1}^{I}{D^{-l_i}} \le 1 $ onde $I = |A_X|$.
+    
+    Se uma escolha do tamanho da codificação satisfazer a inequação, é possível criar um prefixo com tamanho da palavra-chave escolhida.
+    
+    \item O Teorema de Codificação da Fonte (by Wikipédia) para códigos de símbolos indica que para um \textit{ensemble} $X$, existe um prefixo $C$ com o tamanho esperado limitado inferiormente e superiormente pela entropia $H(X)$
+    
+    $\displaystyle H(X) \le L(C, X) < H(X) + 1$
+    
+    Ou seja, existe uma codificação boa o suficiente que satisfaça a inequação acima.
+    
+\end{enumerate}

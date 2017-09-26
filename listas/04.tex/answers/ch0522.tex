@@ -1,0 +1,25 @@
+(MacKay 5.22) [Medium]
+Find a probability distribution $\{p_1. p_2, p_3, p_4\}$ such that there are \textit{two} optimal codes that assign different lengths $\{l_i\}$ to the four symbols.
+
+\subsection*{Resposta}
+
+O conjunto de probabilidades
+
+$\displaystyle\{p_1, p_2, p_3, p_4\} = \left\{ \frac{1}{6}, \frac{1}{5}, \frac{1}{5}, \frac{2}{5} \right\}$
+
+nos da dois diferentes conjuntos de $L(C, X)$ ótimo, porque no segundo passo da codificação de Huffman na árvore de probablidade qualquer dos três agrupamentos
+
+\[\left\{ {\left\{ {\frac{1}{6} + \frac{1}{6}} \right\},\left\{ {\frac{1}{3}} \right\},\left\{ {\frac{1}{3}} \right\}} \right\}\]
+
+Os dois são:
+
+\begin{center}
+$\{00, 01, 10, 11\}$ \\
+ou \\
+$\{000, 001, 01, 1\}$
+\end{center}
+
+e ambos possuem tamanho esperado 2.
+
+
+
