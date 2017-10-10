@@ -1,0 +1,35 @@
+State the following "laws" of information theory.
+
+\begin{enumerate}
+    \item The chain rule for entropy $H(X_1, X_2, \dots, X_n)$.
+    \item The chain rule for mutual information $I(X_1, X_2, \dots, X_n; Y)$.
+    \item The data-processing inequality (DPI), and explain what it intuitively means.
+\end{enumerate}
+
+\subsection*{Respostas}
+
+\begin{enumerate}
+    \item
+    \[H({X_1}, \ldots ,{X_n}) = \sum\limits_{i = 1}^n {H({X_i}|{X_1}, \ldots ,{X_{i-1}})} \]
+    
+    \item
+    \[I({X_1}, \ldots ,{X_n};Y) = \sum\limits_{i = 1}^n {I({X_i};Y|{X_1}, \ldots ,{X_{i - 1}})} \]
+    
+    \item
+    Se temos uma cadeia de Markov:
+    
+    \[X \rightarrow Y \rightarrow Z\]
+    
+    Indicando qual variável aleatória causa qual v.a. através da indicação da seta. Temos, desenvolvendo a regra da cadeia:
+    
+    \[\begin{array}{l}
+    \displaystyle p(x,y,z) = \\
+    \displaystyle = p(x)p(y|x)\underbrace {p(z|x,y)}_{p(z|x)}\\
+    \displaystyle = p(x)p(y|x)p(z|x)
+    \end{array}\]
+    
+    Então a informação ganha por $X$ afeta $Z$ que a variável $Y$ que é causal. Logo,
+    
+    \[I(X; Z) \le I(Y; Z)\]
+    
+\end{enumerate}

@@ -1,0 +1,105 @@
+(MacKay 8.6) [Easy]
+A joint ensemble $XY$ has the following joint distribution.
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{img/ch0806.pdf}    
+\end{center}
+
+
+What is the joint entropy $H(X, Y )$? What are the marginal entropies $H(X)$ and $H(Y)$? For each value of $y$, what is the conditional entropy $H(X | y)$? What is the conditional entropy $H(X | Y )$? What is the conditional entropy of $Y$ given $X$? What is the mutual information between $X$ and $Y$?
+
+\subsection*{Resposta}
+
+Calculando as marginais
+
+\begin{itemize}
+	\item $P(X = x) = \sum\limits_y {P(x,y)}$
+	\item $P(X = 1) = \frac{1}{8} + \frac{1}{{16}} + \frac{1}{{16}} + \frac{1}{4} = \frac{1}{2}$
+	\item $P(X = 2) = \frac{1}{{16}} + \frac{1}{8} + \frac{1}{{16}} + 0 = \frac{1}{4}$
+	\item $P(X = 3) = \frac{1}{{32}} + \frac{1}{{32}} + \frac{1}{{16}} + 0 = \frac{1}{8}$
+	\item $P(X = 4) = \frac{1}{{32}} + \frac{1}{{32}} + \frac{1}{{16}} + 0 = \frac{1}{8}$
+	\item $P(Y = y) = \sum\limits_x {P(x,y)}$
+	\item $P(Y = 1) = \frac{1}{8} + \frac{1}{{16}} + \frac{1}{{32}} + \frac{1}{{32}} = \frac{1}{4}$
+	\item $P(Y = 2) = \frac{1}{{16}} + \frac{1}{8} + \frac{1}{{32}} + \frac{1}{{32}} = \frac{1}{4}$
+	\item $P(Y = 3) = \frac{1}{{16}} + \frac{1}{{16}} + \frac{1}{{16}} + \frac{1}{{16}} = \frac{1}{4}$
+	\item $P(Y = 4) = \frac{1}{4} + 0 + 0 + 0 = \frac{1}{4}$
+\end{itemize}
+
+\[H(X,Y) = \sum\limits_{xy} {P(x,y)\log \frac{1}{{P(x,y)}}}  = \frac{1}{2} \cdot \log 2 +  \ldots  + 0 \cdot \log 0 = \frac{{27}}{8}\]
+
+Calculando:
+
+\begin{itemize}
+    \item $H(X,Y) = \sum\limits_{xy} {P(x,y)\log \frac{1}{{P(x,y)}}}  = \frac{1}{2} \cdot \log 2 +  \ldots  + 0 \cdot \log 0 = \frac{{27}}{8}$
+    
+    \item $H(X) = \frac{1}{2}\log 2 + \frac{1}{4}\log 4 + \frac{1}{8}\log 8 + \frac{1}{8}\log 8 = \frac{1}{2} + \frac{1}{2} + \frac{3}{8} + \frac{3}{8} = \frac{7}{4}$
+    
+    \item $H(Y) = \frac{1}{4}\log 4 + \frac{1}{4}\log 4 + \frac{1}{4}\log 4 + \frac{1}{4}\log 4 = \log 4 = 2$
+    
+\end{itemize}
+
+Para calcular $H(X|y)$, temos que calcular todos os $P(x|y)$.
+
+\begin{itemize}
+	\item $P(x = 1|y = 1) = \frac{1}{2}$
+	\bigskip
+	\item $P(x = 2|y = 1) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 3|y = 1) = \frac{1}{8}$
+	\bigskip
+	\item $P(x = 4|y = 1) = \frac{1}{8}$
+	\bigskip
+	\item $P(x = 1|y = 2) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 2|y = 2) = \frac{1}{2}$
+	\bigskip
+	\item $P(x = 3|y = 2) = \frac{1}{8}$
+	\bigskip
+	\item $P(x = 4|y = 2) = \frac{1}{8}$
+	\bigskip
+	\item $P(x = 1|y = 3) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 2|y = 3) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 3|y = 3) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 4|y = 3) = \frac{1}{4}$
+	\bigskip
+	\item $P(x = 1|y = 4) = 1$
+	\bigskip
+	\item $P(x = 2|y = 4) = 0$
+	\bigskip
+	\item $P(x = 3|y = 4) = 0$
+	\bigskip
+	\item $P(x = 4|y = 4) = 0$
+	\bigskip
+\end{itemize}
+
+Calculando $H(X|y)$:
+
+\begin{itemize}
+	\item $H(X|y = 1) = \frac{7}{4}$
+	\bigskip
+	\item $H(X|y = 2) = \frac{7}{4}$
+	\bigskip
+	\item $H(X|y = 3) = 2$
+	\bigskip
+	\item $H(X|y = 4) = 0$
+	\bigskip
+	$H(X|Y) = \frac{11}{8}$
+\end{itemize}
+
+Lembrando que:
+
+\begin{itemize}
+    \item $H(X,Y) = H(X) + H(Y|X)$
+    \item $H(X) - H(X|Y) = H(Y) - H(Y | X)$
+    \item $I(X;Y) = H(X) - H(X|Y)$
+\end{itemize}
+
+\[H(Y|X) = H(X,Y) - H(X) = \frac{{27}}{8} - \frac{7}{4} = \frac{{13}}{8}\]
+
+E por último.
+
+\[I(X;Y) = \underbrace {H(X)}_{7/4} - \underbrace {H(X|Y)}_{11/8} = \frac{3}{8}\]
+

@@ -1,0 +1,25 @@
+(MacKay 8.7) [Medium]
+Consider the ensemble $XYZ$ in which $A_X = A_Y = A_Z = \{0, 1\}$, $x$ and $y$ are independent with $P_X = \{p, 1-p\}$ and $P_Y = \{q, 1-q\}$ and
+
+\[z = (x + y) \bmod 2\]
+
+\begin{enumerate}
+	\item If $\displaystyle q = \frac{1}{2}$, what is $P_Z$? What is $I(Z; X)$?
+	\item For general $p$ and $q$, what is $P_Z$? What is $I(Z;X)$? Notice that this ensemble is related to the binary symmetric channel, with $x =$ input, $y =$ noise, and $z =$ output.
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{img/ch0807.pdf}    
+\end{center}
+
+\subsection*{Resposta}
+
+\begin{enumerate}
+    \item 
+    Se $q=\frac{1}{2}, P_Z=\{1/2, 1/2\}$ e $I(Z;X) = H(Z) - H(Z|X) = 1 - 1 = 0$
+    \bigskip
+    
+    \item
+    No geral $q$ e $p$, $P_Z = \{pq + (1-p)(1-q), p(1-q) + q(1-p)\}$. A informação mútua é $I(Z; X) = H(Z) - H(Z|X) = H_2(pq+(1-p)(1-q)) - H_2(q)$ 
+    \bigskip
+\end{enumerate}

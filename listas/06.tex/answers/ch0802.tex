@@ -1,0 +1,24 @@
+(MacKay 8.2) [Medium]
+Referring to the definitions of conditional entropy (8.3-8.4), confirm (with an example) that it is possible for $H( X | y = b_k )$ to exceed $H(X)$, but that the average, $H(X|Y)$, is less than $H(X)$. So data are helpful - they do not increase uncertainty, on average.
+
+\subsection*{Resposta}
+
+Utilizando o teorema de Bayes e a inequação de Gibbs':
+
+\[\begin{array}{l}
+\displaystyle H(X|Y) \equiv \sum\limits_{y \in {A_Y}} {P(y)\left[ {\sum\limits_{x \in {A_X}} {P(x|y)\log \frac{1}{{P(x|y)}}} } \right]} \\
+\displaystyle = \sum\limits_{y \in {A_Y}} {\sum\limits_{x \in {A_X}} {P(y)P(x|y)\log \frac{1}{{P(x|y)}}} } \\
+\displaystyle = \sum\limits_{xy \in {A_X}{A_Y}} {P(x,y)\log \frac{1}{{P(x|y)}}} \\
+\displaystyle = \sum\limits_{xy} {P(x|y)\log \frac{1}{{\left( {\frac{{P(y|x)P(x)}}{{P(y)}}} \right)}}} \\
+\displaystyle = \sum\limits_{xy} {P(x)P(y|x)\left[ {\log \frac{{P(y)}}{{P(y|x)}} + \log \frac{1}{{P(x)}}} \right]} \\
+\displaystyle = \sum\limits_{xy} {P(x)P(y|x)\log \frac{{P(y)}}{{P(y|x)}}}  + \sum\limits_{xy} {P(x)P(y|x)\log \frac{1}{{P(x)}}} \\
+\displaystyle = \sum\limits_x {\sum\limits_y {P(x)P(y|x)\log \frac{{P(y)}}{{P(y|x)}}} }  + \sum\limits_x {\sum\limits_y {P(x)P(y|x)\log \frac{1}{{P(x)}}} } \\
+\displaystyle = \sum\limits_x {P(x)\sum\limits_y {P(y|x)\log \frac{{P(y)}}{{P(y|x)}}} }  + \sum\limits_y {P(y|x)\sum\limits_x {P(x)\log \frac{1}{{P(x)}}} } \\
+\displaystyle = \sum\limits_x {P(x)\underbrace {\sum\limits_y {P(y|x)\log \frac{{P(y)}}{{P(y|x)}}} }_0}  + \underbrace {\sum\limits_x {P(x)\log \frac{1}{{P(x)}}} }_{H(X)}
+\end{array}\]
+
+Adquirindo uma soma de entropias entre a distribuição $P(y|x)$ e $P(y)$. Assim, temos:
+
+\[H(X|Y) \le H(X) + 0\]
+
+Teremos a equalidade somente se X e Y forem independentes.

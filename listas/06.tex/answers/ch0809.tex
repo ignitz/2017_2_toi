@@ -1,0 +1,35 @@
+(MacKay 8.9) [Hard]
+Prove this theorem by considering an ensemble $WDR$ in which $w$ is the state of the world, $d$ is data gathered, and $r$ is the processed data, so that these three variables form a \textit{Markov chain}
+
+\[w \rightarrow d \rightarrow r,\]
+
+that is, the probability $P(w, d, r)$ can be written as
+
+\[P(w, d, r) = P(w)P(d | w)P(r | d)\]
+
+Show that the average information that $R$ conveys about $W$, $I(W;R)$, is less than or equal to the average information that $D$ conveys about $W$, $I(W;D)$.
+
+This theorem is as much a caution about our definition of 'information' as it
+is a caution about data processing!
+
+\subsection*{Resposta}
+
+Para qualquer ensemble conjunto $XYZ$, a regra da cadeia para informação mútua é:
+
+\[I(X;Y,Z) = I(X;Y) + I(X;Z|Y)\]
+
+Agora, no caso $w \rightarrow d \rightarrow r$, $w$ e $r$ são independentes dado $d$, então $I(W;R|D) = 0$. Utilizando a regra da cadeia duas vezes, temos:
+
+\[\begin{array}{l}
+I(W;D,R) = I(W;D) + \underbrace {I(W;R|D)}_0\\
+I(W;D,R) = I(W;R) + I(W;D|R)
+\end{array}\]
+
+Com isso, temos:
+
+\[\begin{array}{l}
+I(W;D,R) = I(W;D) + \underbrace {I(W;R|D)}_0\\
+I(W;D,R) = I(W;R) + I(W;D|R)\\
+\\
+I(W;D) = I(W;R) + I(W;D|R) \Rightarrow I(W;D) \ge I(W;R) \Rightarrow I(W;R) - I(W;D) \le 0
+\end{array}\]

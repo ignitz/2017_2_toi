@@ -1,0 +1,31 @@
+(MacKay 8.1) [Medium]
+Consider thrre independent random variables $u,v,w$ with entropies ${{H}_{u}},{{H}_{v}},{{H}_{w}}$ . Let $X\equiv (U,V)$  and $Y\equiv (V,W)$ . What is $H(X,Y)$ ? What is $H(X|Y)$ ? What is $I(X;Y)$ 
+
+\subsection*{Resposta}
+
+Utilizando propriedades da entropia e informações do enunciado (como independência), temos:
+
+\begin{itemize}
+    \item $H(X,Y)$?
+    \[\begin{array}{l}
+H\left( {X,Y} \right) = H\left( {(U,V),(V,W)} \right) = H\left( {U,V,V,W} \right) = \\
+ = H(U) + \underbrace {H(V|U)}_{H(V)} + \underbrace {H(V|U,V)}_0 + \underbrace {H(W|U,V,V)}_{H(W)}\\
+ = H(U) + H(V) + H(W) = {H_u} + {H_v} + {H_w}
+\end{array}\]
+
+Note que $H(V|U,V) = 0$ pois não gera incerteza já que $V$ é dados.
+
+\item $H(X|Y)$?
+\[\begin{array}{l}
+H(X|Y) = H\left( {(U,V)|(V,W)} \right) = H\left( {U,V|V,W} \right) = \\
+ = \underbrace {H(U|V,W)}_{H(U)} + \underbrace {H(V|V,W,U)}_0 = H(U) + 0 = {H_u}
+\end{array}\]
+
+\item $I(X;Y)$?
+\[\begin{array}{l}
+I(X;Y) = H(X) - \underbrace {H(X|Y)}_{H(U)} = H(U,V) - H(U) = \\
+ = H(U) + H(V) - H(U) = H(V) = {H_v}
+\end{array}\]
+
+\end{itemize}
+

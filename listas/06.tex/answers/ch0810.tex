@@ -1,0 +1,42 @@
+(MacKay 8.10) [Medium]
+The three cards.
+
+\begin{enumerate}
+    \item One card is white on both faces; one is black on both faces; and one is white on one side and black on the other. The three cards are shuffled and their orientations randomized. One card is drawn and placed on the table. The upper face is black. What is the colour of its lower face? (Solve the inference problem.)
+    
+    \item Does seeing the top face convey \textit{information} about the colour of the bottom face? Discuss the \textit{information contents} and \textit{entropies} in this situation. Let the value of the upper face's colour be $u$ and the value of the lower face's colour be $l$. Imagine that we draw a random card and learn both $u$ and $l$. What is the entropy of $u$, $H(U)$? What is the entropy of $l$, $H(L)$? What is the mutual information between $U$ and $L$, $I(U;L)$?
+\end{enumerate}
+
+\subsection*{Resposta}
+
+O problema é semelhante das bolas na urna.
+
+\begin{enumerate}
+    \item
+    Seja $\{w, b\}$ representando a face branca e preta da carta respectivamente, e $l, u$ indicando quais eventos \textit{lower} e \textit{upper} da carta. Utilizando Bayes, temos:
+    
+    \[p(l = w|u = b) = \frac{{p(l = w,u = b)}}{{p(w = b)}} = \frac{{\left( {\frac{1}{6}} \right)}}{{\left( {\frac{3}{6}} \right)}} = \frac{1}{3}\]
+    
+    Já o complementar é:
+    
+    \[p(l = b|u = b) = 1 - p(l = w|u = b) = \frac{2}{3}\]
+    
+    É mais provável que parte de baixo da carta tenha a cor preta.
+    \bigskip
+    
+    \item
+    \[H(U) = H(L) = 1\;bit\]
+    
+    1 bit pois só responde uym nível da árvore de perguntas.
+    
+    \[H(L|U = b) = \frac{1}{3}\log 3 + \frac{2}{3}\log \frac{3}{2} = \frac{1}{3}\left( {\log 3 + 2\log 3 - 2\log 2} \right) = \frac{1}{3}(3\log 3 - 2) = \log 3 - \frac{2}{3}\]
+    
+    \[H(L|U = w) = \frac{2}{3}\log \frac{3}{2} + \frac{1}{3}\log 3 = \frac{1}{3}(2\log 3 - 2\log 2 + \log 3) = \frac{1}{3}(3\log 3 - 2) = \log 3 - \frac{2}{3}\]
+    
+    Informação mútua:
+    
+    \[\begin{array}{l}
+    I(U;L) = H(L) - H(L|U) = 1 - \left( {\log 3 - \frac{2}{3}} \right) = 1 + \frac{2}{3} - \log 3 = \frac{5}{3} - \log 3
+    \end{array}\]
+    
+\end{enumerate}

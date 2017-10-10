@@ -1,0 +1,61 @@
+The entropy $H(X) = -\sum_{x}{\log p(x)}$ can be interpreted as the uncertainty one has about the random variable $X$. With that in mind, for each of the items below, give its name, its mathematical formula and explain its meaning in terms of uncertainty.
+
+\begin{enumerate}
+    \item $H(X, Y)$
+    \item $H(X | Y)$
+    \item $I(X; Y)$
+    \item $I(X; Y | Z)$
+\end{enumerate}
+
+\subsection*{Respostas}
+
+\begin{enumerate}
+    \item
+    Joint Entropy
+    
+    \[H(X,Y) = \sum\limits_{x,y} {p(x,y)\log \frac{1}{p(x,y)}} \]
+    
+    Quantifica a incerteza quando as variáveis aleatórias $X$ e $Y$ são utilizadas juntas.
+    
+    \bigskip
+    
+    \item
+    Conditional entropy
+    
+    \[\begin{array}{l}
+    \displaystyle H(X,Y) = \\
+    \displaystyle = \sum\limits_y {p(y)H(X|Y = y)} \\
+    \displaystyle = \sum\limits_{x,y} {p(x,y)\log \frac{1}{{p(x|y)}}} 
+    \end{array}\]
+    
+    incerteza da variável aleatória $X$ dado o valor $Y$.
+    
+    \bigskip
+    
+    \item
+    Mutual Information
+    
+    \[\begin{array}{l}
+    I(X;Y) = H(X) - H(X|Y)\\
+    I(Y;X) = H(Y) - H(Y|X)\\
+    I(X;Y) = I(Y;X)
+    \end{array}\]
+    
+    quanto o conhecimento de $Y$ reduz a incerteza a $X$ e análogo a simetria.
+    
+    \bigskip
+    
+    \item
+    Mutual information with $Z$?
+    
+    \[\begin{array}{l}
+    I(X; Y | Z) = H(X | Z) - H(X | Y, Z)\\
+    I(Y; X | Z) = H(Y | Z) - H(Y | X, Z)\\
+    I(X; Y | Z) = I(Y; X | Z)
+    \end{array}\]
+    
+    quanto o conhecimento de $Y$ reduz a incerteza de $X$, assumindo que a variável aleatória $Z$ é conhecida.
+    
+    Também é simétrico.
+    
+\end{enumerate}
